@@ -1,0 +1,8 @@
+[Show]
+compressfileitemaction=true
+extractfileitemaction=true
+kdeconnectfileitemaction=true
+makefileactions=true
+mountisoaction=true
+sharefileitemaction=true
+tagsfileitemaction=true

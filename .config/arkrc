@@ -1,0 +1,13 @@
+[ExtractDialog]
+2 screens: Window-Maximized=true
+
+[General]
+LockSidebar=true
+ShowSidebar=true
+
+[MainWindow]
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+
+[Viewer]
+ToolBarsMovable=Disabled
