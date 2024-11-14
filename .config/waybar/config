@@ -1,0 +1,124 @@
+{
+	// "layer": "top", // Waybar at top layer
+	// "position": "bottom", // Waybar position (top|bottom|left|right)
+	"height": 20, // Waybar height (to be removed for auto height)
+	// "width": 1280, // Waybar width
+
+	// Choose the order of the modules
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": [ "hyprland/language", "custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "network", "backlight", "pulseaudio", "clock", "battery", "idle_inhibitor", "tray"],
+
+	// Modules configuration
+	"hyprland/workspaces": {
+		"disable-scroll": true,
+	 	"all-outputs": false,
+	 	"format": "{icon}",
+	 	"format-icons": {
+	 		"1":"一",
+	 		"2":"二",
+	 		"3":"三",
+	 		"4":"四",
+	 		"5":"五",
+      "6":"六",
+      "7":"七",
+      "8":"八",
+      "9":"九",
+      "10":"十",
+      "sort-by-number": true
+	 	},
+    "persistent-workspaces": 
+    {
+      "DP-2": [1, 2, 3, 4, 5],
+      "DP-3": [6, 7, 8, 9, 10],
+    },
+	 },
+
+  "hyprland/window": {
+   "format": "👉 {}",
+   "rewrite": {
+       "(.*) — Mozilla Firefox": "🌎 $1",
+       "(.*) - fish": "> [$1]"
+   },
+   "separate-outputs": true
+  },
+	"custom/disk_home": {
+		"format": "/home {} ",
+		"interval": 30,
+		"exec": "df -h --output=avail $HOME | tail -1 | tr -d ' '"
+	},
+	"custom/disk_root": {
+		"format": "/ {} ",
+		"interval": 30,
+		"exec": "df -h --output=avail / | tail -1 | tr -d ' '"
+	},
+    "hyprland/language": {
+        "format": "{}",
+        "max-length": 18
+    },
+	"temperature": {
+		"thermal-zone": 2,
+		"hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": "{temperatureC}°C {icon}",
+		"format": "<span color='#e88939'>{icon}</span> {temperatureC}°C",
+		"format-icons": ["", "", ""]
+	},
+	"cpu": {
+		"format": "cpu {usage}%",
+		"tooltip": false
+	},
+	"memory": {
+		"format": "ram {used:0.1f}G"
+	},
+	"network": {
+		"family": "ipv4",
+		// "interface": "wlp2*", // (Optional) To force the use of this interface
+		"format-wifi": "<span color='#589df6'></span> <span color='gray'>{essid}</span> {frequency} <span color='#589df6'>{signaldBm} dB</span> <span color='#589df6'>⇵</span> {bandwidthUpBits}/{bandwidthDownBits}",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+		"format-linked": "{ifname} (No IP)",
+		"format-disconnected": "Disconnected ⚠",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
+		"interval": 5
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}% {format_source}",
+		"format-muted": "🔇 {format_source}",
+		"format-bluetooth": "{icon} {volume}% {format_source}",
+		"format-bluetooth-muted": "🔇 {format_source}",
+
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["🔈", "🔉", "🔊"]
+		},
+		"on-click": "pavucontrol",
+		"on-click-right": "ponymix -N -t source toggle"
+	},
+	"clock": {
+		"interval": 1,
+		"format": "{:%H:%M:%S}",
+		"tooltip-format": "{:%Y-%m-%d | %H:%M:%S}"
+		// "format-alt": "{:%Y-%m-%d}"
+	},
+	"idle_inhibitor": {
+		"format": "<span color='#589df6'>{icon}</span>",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"on-click-right": "swaylock -eFfki ~/.config/lockscreen-origin.png"
+	},
+	"tray": {
+		// "icon-size": 21,
+		"spacing": 10
+	},
+}
