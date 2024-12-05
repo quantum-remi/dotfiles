@@ -10,19 +10,19 @@ import = [
 size = 12.0
 
 [font.bold]
-family = "Source Code Pro"
+family = "JetBrainsMonoNerdFont"
 style = "Bold"
 
 [font.bold_italic]
-family = "Source Code Pro"
+family = "JetBrainsMonoNerdFont"
 style = "Bold Italic"
 
 [font.italic]
-family = "Source Code Pro"
+family = "JetBrainsMonoNerdFont"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "JetBrainsMonoNerdFont"
 style = "Monospace"
 
 [font.offset]

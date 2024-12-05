@@ -19,3 +19,5 @@ vim.cmd [[ set termguicolors ]]
 
 --Line numbers
 vim.wo.number = true
+
+vim.keymap.set('n', '<C-e>', require("nvim-tree.api").tree.toggle)
