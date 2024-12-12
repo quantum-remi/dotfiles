@@ -4,8 +4,8 @@ This repository holds configuration files for customizing my environment setup a
 
 ## Contents
 
-- **.config**: Config files for applications and tools.
-- **.fonts**: Custom fonts for the UI and terminal.
-- **.icons**: Icon sets for application theming.
-- **.themes/NsCDE**: NsCDE theme files for a cohesive look.
+- **.config**: Config files
+- **.fonts**: mainly nerd fonts
+- **.icons**: Icon
+- **.themes/NsCDE**: NsCDE theme files
 
