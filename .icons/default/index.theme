@@ -1,5 +1,5 @@
+# This file is written by nwg-look. Do not edit.
 [Icon Theme]
-Name = Default
-Comment = Default Cursor Theme
-Inherits = dmz-aa
-
+Name=Default
+Comment=Default Cursor Theme
+Inherits=XCursor-Pro-Dark

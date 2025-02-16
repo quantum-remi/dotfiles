@@ -6,7 +6,6 @@
 
 	// Choose the order of the modules
 	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["hyprland/window"],
 	"modules-right": [ "hyprland/language", "custom/disk_home", "custom/disk_root","temperature", "cpu", "memory", "network", "backlight", "pulseaudio", "clock", "battery", "idle_inhibitor", "tray"],
 
 	// Modules configuration
@@ -34,14 +33,6 @@
     },
 	 },
 
-  "hyprland/window": {
-   "format": "👉 {}",
-   "rewrite": {
-       "(.*) — Mozilla Firefox": "🌎 $1",
-       "(.*) - fish": "> [$1]"
-   },
-   "separate-outputs": true
-  },
 	"custom/disk_home": {
 		"format": "/home {} ",
 		"interval": 30,
